@@ -24,6 +24,7 @@ public class isometricMovement : MonoBehaviour
    {
      if (other.gameObject.CompareTag("pickup"))
      {
+         FindObjectOfType<AudioManager>().Play("pickup");
          Destroy(other.gameObject);
      }  
    }
