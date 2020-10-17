@@ -20,4 +20,12 @@ public class isometricMovement : MonoBehaviour
     private void FixedUpdate() {
       rigid.MovePosition(rigid.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+     private void OnCollisionEnter2D(Collision2D other)
+   {
+     if (other.gameObject.CompareTag("pickup"))
+     {
+         Destroy(other.gameObject);
+     }  
+   }
 }
+
