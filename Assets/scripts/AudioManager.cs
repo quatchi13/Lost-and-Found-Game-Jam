@@ -2,28 +2,13 @@
 using System;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 
 {
     public Sound[] sounds;
+    
 
-    public static SoundManager instance;
-
-    void Awake() {
-
-        if (instance == null) {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-     void Awake()
+    void Awake()
     {
         foreach(Sound s in sounds)
         {
