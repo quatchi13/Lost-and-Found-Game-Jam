@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class isometricMovement : MonoBehaviour
 {
 
-   
+    public Animator animator;
     public GameObject SHHHHNOTSUS;
 
     public float moveSpeed = 10f;
@@ -19,6 +19,7 @@ public class isometricMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", movement.x);
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
