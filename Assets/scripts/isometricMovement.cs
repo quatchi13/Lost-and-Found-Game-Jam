@@ -45,6 +45,51 @@ public class isometricMovement : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("pickup");
                 Destroy(other.gameObject);
+                GameObject missionT = SHHHHNOTSUS.transform.Find("missionT2").gameObject;
+                missionT.SetActive(true);
+            }
+        }
+
+        if (other.gameObject.CompareTag("mission2"))
+        {
+            FindObjectOfType<AudioManager>().Play("mission 2");
+            Destroy(other.gameObject);
+            GameObject item = SHHHHNOTSUS.transform.Find("Item2").gameObject;
+            item.SetActive(true);
+            if (other.gameObject.CompareTag("pickup"))
+            {
+                FindObjectOfType<AudioManager>().Play("pickup");
+                Destroy(other.gameObject);
+                GameObject missionT = SHHHHNOTSUS.transform.Find("missionT3").gameObject;
+                missionT.SetActive(true);
+            }
+        }
+        if (other.gameObject.CompareTag("mission3"))
+        {
+            FindObjectOfType<AudioManager>().Play("mission 3");
+            Destroy(other.gameObject);
+            GameObject item = SHHHHNOTSUS.transform.Find("Item3").gameObject;
+            item.SetActive(true);
+            if (other.gameObject.CompareTag("pickup"))
+            {
+                FindObjectOfType<AudioManager>().Play("pickup");
+                Destroy(other.gameObject);
+                GameObject missionT = SHHHHNOTSUS.transform.Find("missionT4").gameObject;
+                missionT.SetActive(true);
+            }
+        }
+        if (other.gameObject.CompareTag("mission4"))
+        {
+            FindObjectOfType<AudioManager>().Play("mission 4");
+            Destroy(other.gameObject);
+            GameObject item = SHHHHNOTSUS.transform.Find("Item4").gameObject;
+            item.SetActive(true);
+            if (other.gameObject.CompareTag("pickup"))
+            {
+                FindObjectOfType<AudioManager>().Play("pickup");
+                Destroy(other.gameObject);
+                GameObject missionT = SHHHHNOTSUS.transform.Find("missionT5").gameObject;
+                missionT.SetActive(true);
             }
         }
 
