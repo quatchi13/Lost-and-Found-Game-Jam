@@ -22,7 +22,8 @@ public class isometricMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate() 
+    {
       rigid.MovePosition(rigid.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
     private void OnCollisionEnter2D(Collision2D other)
@@ -44,6 +45,7 @@ public class isometricMovement : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("pickup");
                 Destroy(other.gameObject);
             }
+        }
 
 
 
